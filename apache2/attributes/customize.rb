@@ -11,4 +11,8 @@
 #normal[:apache][:contact] = 'you@your-site.com'
 #normal[:apache][:timeout] = 60
 
+
+default[:apache][:docroot] = '/srv/www/yourls/current/'
+default[:apache][:admindocroot] = '/srv/www/yourlsadmin/current/'
+
 normal[:apache][:listen_ports] = [ '80','443','8080' ]
