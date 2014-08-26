@@ -1,1 +1,1 @@
-default[:apache][:docport] = "#{deploy[:environment_variables][:docport]}"
+normal[:apache][:docport] = "#{deploy[:environment_variables][:docport]}"
