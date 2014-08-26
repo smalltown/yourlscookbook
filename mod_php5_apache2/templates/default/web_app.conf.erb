@@ -1,4 +1,4 @@
-<VirtualHost *:<%= @params[:docport] %>>
+<VirtualHost *:<%= node[:apache][:docport] %>>
   ServerName <%= @params[:server_name] %>
   <% if @params[:server_aliases] && !@params[:server_aliases].empty? -%>
   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
