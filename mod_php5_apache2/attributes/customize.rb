@@ -12,4 +12,5 @@
 #normal[:apache][:timeout] = 60
 
 
-normal[:apache][:listen_ports] = [ '80','443','8080' ]
+default[:apache][:docroot] = '/srv/www/yourls/current/'
+default[:apache][:admindocroot] = '/srv/www/yourlsadmin/current/'

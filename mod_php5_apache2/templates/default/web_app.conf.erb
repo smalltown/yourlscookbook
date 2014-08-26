@@ -31,8 +31,6 @@
 
   RewriteEngine On
   Include <%= @params[:rewrite_config] %>*
-  RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
-  RewriteLogLevel 0
   
   <% if @params[:mounted_at] -%>
   AliasMatch ^<%= @params[:mounted_at] %>/(.*)$ <%= @params[:docroot] %>$1
