@@ -3,9 +3,9 @@
   <% if @params[:server_aliases] && !@params[:server_aliases].empty? -%>
   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
   <% end -%>
-  DocumentRoot <%= @params[:docroot] %>
+  DocumentRoot <%= node[:apache][:docroot] %>
 
-  <Directory <%= @params[:docroot] %>>
+  <Directory <%= node[:apache][:docroot] %>>
     Options FollowSymLinks
     AllowOverride All
     Order allow,deny
@@ -45,9 +45,9 @@
   <% if @params[:server_aliases] && !@params[:server_aliases].empty? -%>
   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
   <% end -%>
-  DocumentRoot <%= @params[:docroot] %>
+  DocumentRoot <%= node[:apache][:admindocroot] %>
 
-  <Directory <%= @params[:docroot] %>>
+  <Directory <%= node[:apache][:admindocroot] %>>
     Options FollowSymLinks
     AllowOverride All
     Order allow,deny
